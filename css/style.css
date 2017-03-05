@@ -1,0 +1,1423 @@
+/*--全部共用區--*/
+
+html, body{	
+	font-family:Arial,Helvetica, 微軟正黑體,sans-serif;
+	-webkit-text-size-adjust:none;
+	background-color: #efe9e7;
+}
+
+*{
+	margin: 0 auto;
+	box-sizing:border-box; 
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+input{
+	border-radius:5px;
+	margin-top: 5px;
+	color: #999;
+	margin-right: 5%;
+}
+
+input[type="radio"]{
+	margin-left:1%;
+}
+
+span{
+	display: block;
+	line-height: 1.6;
+	font-size: 16px;
+	color: #3d1101;
+}
+
+h3{
+	font-size: 30px;
+	color: #3D1101;
+	text-align: center;
+	margin-bottom: 25px;
+	letter-spacing: 3px;
+}
+
+h4{
+	display: block;
+	color:#3d1101;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 22px;
+}
+
+li{
+	font-size: 16px;
+	line-height: 1.6;
+	color:#3d1101;
+}
+
+p{
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.list_food li{
+	box-shadow:2px 2px 12px -2px rgba(20%,20%,40%,0.3);
+}
+
+.login_box .box{
+	display: block;
+	width: 100%;
+	height:70px;
+	margin-bottom:7%; 
+}
+
+.error{
+	display: none;
+	color: #FF0000;
+	font-size: 12px;
+	margin-top: 1%;
+}
+
+.error-t{
+	display: none;
+	color: #FF0000;
+	font-size: 12px;
+}
+
+.login_box .input_login{
+	width: 100%;
+	height: 40px;
+	border: 1px solid #CCC;
+}
+
+.login_box .btnarea{
+	width: 400px;
+	height: 50px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+/*pure start*/
+.btn {
+    /* Structure */
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    box-sizing: border-box;
+    margin-right: 20px;
+    width: 100px;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/*csslint outline-none:false*/
+
+.btn {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    background-color: #FFF;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.btn-hover,
+.btn:hover,
+.btn:focus {
+    /* csslint ignore:start */
+    filter: alpha(opacity=90);
+    /* csslint ignore:end */
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.btn:focus {
+    outline: 0;
+}
+.btn-active,
+.btn:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000\9;
+}
+
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled:active {
+    border: none;
+    background-image: none;
+    /* csslint ignore:start */
+    filter: alpha(opacity=40);
+    /* csslint ignore:end */
+    opacity: 0.40;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.btn-hidden {
+    display: none;
+}
+
+.btn-primary,
+.btn-selected,
+a.btn-primary,
+a.btn-selected {
+    background-color: rgb(0, 120, 231);
+    color: #fff;
+}
+
+.btn-cart,
+.btn-selected,
+a.btn-cart,
+a.btn-selected{
+    width: 96%;
+	border: 1px solid #F75000;
+	color: #F75000;
+	text-align: center;
+}
+
+.btn-login,
+.btn-selected,
+a.btn-login,
+a.btn-selected {
+	background-color:#F75000;
+    color: #fff;
+    width: 30%;
+}
+
+/*pure end*/
+
+/*頁首*/
+
+#WRAPPER{
+	width:1049px;
+	margin:0 auto;
+}
+
+.top-menu{
+	display:none;
+}
+
+
+#headerArea{
+	width:1049px;
+	height:50px;
+	margin:0 auto;
+	background-color: #000;
+	padding: 1%;
+	position: relative;
+}
+
+#headerArea .logo{
+	width: 95px;
+	height:50px;
+	background-image:url(../assets/logo_w@svg.svg);
+	background-repeat: no-repeat;
+	float: left;
+}
+
+#headerArea .nav {
+	width:150px;
+	height:50px;
+	line-height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#headerArea .nav li a{
+	display:block;
+	width:50px;
+	text-align:center;
+	text-decoration:none;
+	color:#FFF;	
+}
+
+/*頁首_banner*/
+
+#banner{
+	width:1049px;
+	height:420px;
+	margin:0 auto;
+	background-image:url(../assets/header_desktop.png);
+	margin-bottom: 25px;
+}
+
+#banner h1{
+	display: inline-block;
+	width: 100%;
+	font-size: 40px;
+	color: #FFF;
+	line-height: 420px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*內容*/
+#container{
+	width:1049px;
+	overflow: hidden;
+}
+
+.introduction{
+	display: block;
+	width:100%;
+	height: auto;
+}
+
+.introduction li{
+	width: 31.33333%;
+	height: auto;
+	margin-right: 1%;
+	margin-left: 1%;
+	float: left;
+	text-align:center;
+	margin-bottom: 25px;
+}
+
+.introduction img{
+	width: 200px;
+	height: 200px;
+	text-align:center;
+}
+
+.introduction h4{
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.introduction span{
+	display: block;
+	width: 100%;
+	padding: 2%;
+}
+.introduction_two{
+	display: block;
+	width:100%;
+	height: auto;
+	padding:1% 0;
+	margin-bottom: 25px;
+	float:left;
+	background-color: #3d1101;
+	clear: both;
+}
+
+.introduction_two li{
+	width:48%;
+	padding-left:1%;
+	float:left;
+}
+
+	
+.introduction_two img{
+	width: 100%;
+}
+	
+.introduction_two li p{
+	color: #FFF;
+}
+	
+.introduction_three {
+	width: 100%;
+	height: 280px;
+	margin-bottom:25px;
+	clear: both;
+}
+
+.introduction_three li{
+	width: 31.33333%;
+	margin-right: 1%;
+	margin-left: 1%;
+	float: left;
+	position: relative;
+	margin-bottom: 20%;
+}
+
+.introduction_three li .blog-pho{
+	width: 25%;
+}
+
+.introduction_three li .blog-pho img{
+	width: 100%;
+}	
+
+.introduction_three li .blog-content{
+	width: 73%;
+	margin-left: 2%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}	
+	
+.blog-content h4{
+	width: 100%;
+	height: auto;
+	margin-bottom:25px;
+}
+
+.blog-content span{
+	width: 100%;
+	height: auto;
+}
+
+.reservation{
+	width:100%;
+	height: 410px;
+	padding:1%;
+	background-color: #f6f4f3;
+	margin-bottom:40px;
+	position: relative;
+}
+
+.reservation .contact{
+	width: 49%;
+	float:left;
+}
+
+.reservation .map{
+	width: 49%;
+	float:left;
+}
+
+.reservation .contact li{
+	width: 100%;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+.contact .input_text{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #CCC;
+}
+
+/*頁尾*/
+#footer{
+	width:1049px;
+	height: 180px;
+	padding: 1%;
+	margin: 0 auto;
+}
+
+#footer .content-box{
+	width: 350px;
+	float: left;
+	margin-right: 2%;
+}
+
+.content-box h4{
+	width: 340px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.logo_two{
+	float: right;
+}
+
+.com{
+	float: right;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+/*登入頁*/
+#container .login_top{
+	width: 400px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#container .login_box{
+	width: 400px;
+	height: 350px;
+	margin: 0 auto;
+	border-top: 4px solid #F75000;
+	box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+	margin-bottom:40px;
+	padding: 1%;
+}
+
+.login_box h4{
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+
+/*購物車列*/
+
+#container .cart{
+	width: 100%;
+	height: auto;
+}
+
+.cart .list-area{
+	width: 30%;
+	height: auto;
+	float: left;
+}
+
+.list-area h4{
+	width: 100%;
+	height: auto;
+	padding-bottom: 25px;
+}
+
+.list-area ul{
+	width: 100%;
+	height: auto;
+}
+
+.list-area li{
+	display: block;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	border-bottom: 1px solid #3d1101; 
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+}
+
+.list-area li a:hover{
+	display: block;
+	background-color:#3d1101; 
+	color: #FFF;
+}
+
+.cart .prouduct{
+	width: 68%;
+	height: auto;
+	margin-left: 2%;
+	float: left;
+}
+
+.prouduct .search-area{
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px; 
+	position: relative;
+}
+
+.formSearch{
+	width: 480px;
+	height: 30px;
+	height: auto;
+	position: relative;
+}
+.formSearch .searchbox{
+	width: 440px;
+	height:25px;
+	top: -2px;
+	border: 2px solid #3d1101;
+
+}
+
+.formSearch .submit_btn{
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	border: 2px solid #3d1101;
+	background-color: #3d1101;
+	position: absolute;
+	top: 0;
+	right: -10px;
+}
+
+.search-area span{
+	width: 100px;
+	height: 25px;
+	position: absolute;
+	top: 0;
+	right: -10px;
+}
+
+
+.prouduct .list_food-area{
+	width: 100%;
+	height: auto;
+}
+
+.list_food-area .list_food{
+	width: 100%;
+	height: auto;
+}
+
+.list_food li{
+	width: 31.333%;
+	margin: 1%;
+	height: 280px;
+	float: left;
+	text-align: center;
+}
+
+.list_food li img{
+	width: 100%;
+}
+
+.list_food li h4{
+	width: 100%;
+	height: auto;
+	padding-bottom:1%
+}
+
+.list_food li .en_text{
+	font-size: 8px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #3d1101;
+}
+
+.list_food li .price{
+	display: block;
+	height: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 10px;
+	line-height: 1.8;
+}
+
+/*==手機版型區==*/
+@media screen and (max-width:736px) {
+	*{
+		box-sizing:border-box;
+	}
+	/*頁首*/
+	#WRAPPER{
+		width:100%;
+		min-width:320px;
+	}
+
+	#headerArea{
+		width:100%;
+		height:50px;
+		background-color: #000;
+		padding: 1%;
+		position: relative;
+	}
+
+	#headerArea .logo{
+		width: 95px;
+		height:50px;
+		background-image:url(../assets/logo_w@svg.svg);
+		background-repeat: no-repeat;
+		float: left;
+	}
+
+	#headerArea .nav {
+		display: none;
+		width:100%;
+		height:auto;
+		line-height: 50px;
+		background-color: #000;
+		position: absolute;
+		top: 50px;
+	}
+
+	#headerArea .nav ul {
+		width: 100%;
+	}
+
+	#headerArea .nav li {
+		float:none;
+	}
+
+	#headerArea .nav li a{
+		display:block;
+		width:100%;
+		font-size: 20px;
+		text-align:center;
+		text-decoration:none;
+		color:#FFF;
+		border-bottom: 1px solid #FFF;	
+	}
+
+	#headerArea	.top-menu{
+		display:block;
+		width:100%;
+		position:relative;
+		background-color:#000;
+	}
+	
+	#headerArea	.top-menu .menu-btn{
+		display:block;
+		width:60px;
+		height:50px;
+		background-image:url(../assets/btn.png);
+		background-repeat: no-repeat;
+		position:absolute;
+		right:0;
+		top:0;
+		text-indent:-9999px;
+	}
+
+	/*頁首_banner*/
+
+	#banner{
+		width:100%;
+		height:0;
+		padding-bottom:70%;
+		background-image:url(../assets/header_mobile.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#banner h1{
+		display: inline-block;
+		font-size: 32px;
+		color: #FFF;
+		font-weight: bold;
+		line-height: 350px;
+		text-align: center;
+	}
+
+	/*內容*/
+	#container{
+		width:100%;
+	}
+
+	.introduction{
+		display: block;
+		width:100%;
+		height: auto;
+	}
+
+	.introduction li{
+		width:100%;
+		height: auto;
+		float: none;
+		margin-bottom: 25px;
+	}
+
+	.introduction img{
+		width:200px;
+		height:200px;
+		text-align:center;
+		margin-bottom: 15px;
+	}
+
+	.introduction span{
+		width: 100%;
+		padding: 2%;
+	}
+
+	.introduction h4{
+		text-align: center;
+		padding-bottom: 10px;
+	}
+
+	.introduction_two{
+		display: block;
+		width:100%;
+		height: auto;
+		padding:1% 0;
+		margin-bottom: 25px;
+		float:left;
+		background-color: #3d1101;
+		clear: both;
+	}
+
+	.introduction_two li{
+		width:100%;
+		padding-left:1%;
+		float:left;
+	}
+
+		
+	.introduction_two img{
+		width: 100%;
+	}
+		
+	.introduction_two li p{
+		color: #FFF;
+	}
+		
+	.introduction_three {
+		width: 100%;
+		height: auto;
+		margin-bottom:25px;
+	}
+
+	.introduction_three li{
+		width: 100%;
+		float: none;
+		position: relative;
+		margin-bottom: 25%;
+	}
+
+	.introduction_three li .blog-pho{
+		width: 25%;
+	}
+
+	.introduction_three li .blog-pho img{
+		width: 100%;
+	}
+	
+	.introduction_three li .blog-content{
+		width: 73%;
+		margin-left: 2%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}	
+	
+	.introduction_three li .blog-content h4{
+		width: 100%;
+		height: auto;
+		margin-bottom:25px;
+	}
+
+	.introduction_three li .blog-content span{
+		width: 100%;
+		height: auto;
+	}
+	
+	.reservation{
+		width:100%;
+		height: auto;
+		padding:1%;
+		background-color: #f6f4f3;
+		margin-bottom: 25px;
+		position: relative;
+	}
+
+	.reservation .contact{
+		width: 100%;
+		float:none;
+	}
+
+	.reservation .map{
+		width: 100%;
+		float:none;
+
+	}
+
+	.reservation .map img{
+		width:100%;
+		text-align: center;
+	}
+
+	.contact li{
+		padding-bottom: 20px;
+	}
+
+	.contact .input_text{
+		width: 100%;
+		height: 30px;
+		border: 1px solid #CCC;
+	}
+
+	/*頁尾*/
+	#footer{
+		width:100%;
+		height: 200px;
+		padding: 1%;
+		margin: 0 auto;
+	}
+
+	#footer .content-box{
+		width: 100%;
+		float: none;
+		margin-bottom: 5%;
+	}
+
+	.content-box h4{
+		width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+
+	.content-box p{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.logo_two{
+		display: block;
+		width: 100%;
+		height: auto;
+		float: none;
+		text-align: right;
+	}
+
+	.com{
+		float: right;
+		margin-left:10px;
+		margin-top:10px;
+	}
+
+	/*登入頁*/
+	#container .login_top{
+		width: 400px;
+		height: 100px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	#container .login_box{
+		width: 400px;
+		height: 350px;
+		margin: 0 auto;
+		border-top: 4px solid #F75000;
+		box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+		margin-bottom:40px;
+		padding: 1%;
+	}
+
+	.login_box h4{
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	/*購物車列*/
+
+	#container .cart{
+		width: 100%;
+		height: auto;
+		padding: 1%;
+	}
+
+	.cart .list-area{
+		width: 100%;
+		height: auto;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+
+	.list-area h4{
+		width: 100%;
+		height: auto;
+		padding-bottom: 25px;
+	}
+
+	.list-area ul{
+		width: 100%;
+		height: auto;
+	}
+
+	.list-area li{
+		display: block;
+		width: 100%;
+		height: 25px;
+		line-height: 25px;
+		border-bottom: 1px solid #3d1101; 
+		margin-bottom: 15px;
+		padding-bottom: 5px;
+	}
+
+	.list-area li a:hover{
+		display: block;
+		background-color:#3d1101; 
+		color: #FFF;
+	}
+
+	.cart .prouduct{
+		width: 100%;
+		height: auto;
+	}
+
+	.prouduct .search-area{
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+
+	.prouduct .search-area ul{
+		width: 100%;
+		height: auto;
+	}
+
+	.prouduct .search-area{
+		display: block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 10%;
+		position: relative; 
+	}
+
+	.formSearch{
+		display: block;
+		width: 100%;
+		height:auto;
+	}
+	.formSearch .searchbox{
+		width: 95%;
+		height:25px;
+		border: 2px solid #3d1101;
+	}
+
+	.formSearch .submit_btn{
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		vertical-align: middle;
+		border: 2px solid #3d1101;
+		background-color: #3d1101;
+	}
+
+	.search-area span{
+		width: 100%;
+		height: 25px;
+		margin-top:10%;
+		position: absolute;
+		bottom: 0;
+		right: 20px;
+		text-align: right;
+	}
+
+	.prouduct .list_food-area{
+		width: 100%;
+		height: auto;
+	}
+
+	.list_food-area .list_food{
+		width: 100%;
+		height: auto;
+	}
+
+	.list_food li{
+		width: 100%;
+		height: auto;
+		padding:2%; 
+		margin-bottom: 10%;
+		float: none;
+		text-align: center;
+	}
+
+	.list_food li img{
+		width: 100%;
+	}
+
+	.list_food li h4{
+		width: 100%;
+		height: auto;
+		padding-bottom:1%
+	}
+
+	.list_food li .en_text{
+		font-size: 10px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #3d1101;
+	}
+
+	.list_food li .price{
+		font-size: 26px;
+		font-weight: bold;
+		font-style: italic;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+/*==平板版型==*/
+
+@media screen and (min-width:768px) and (max-width:1024px){
+		/*頁首*/
+	#WRAPPER{
+		width:100%;
+		margin:0 auto;
+	}
+
+	.top-menu{
+		display:none;
+	}
+
+	#headerArea{
+		width:100%;
+		height:50px;
+		margin:0 auto;
+		background-color: #000;
+		padding: 1%;
+		position: relative;
+	}
+
+	#headerArea .logo{
+		width: 95px;
+		height:50px;
+		background-image:url(../assets/logo_w@svg.svg);
+		background-repeat: no-repeat;
+		float: left;
+	}
+
+	#headerArea .nav {
+		width:150px;
+		height:50px;
+		line-height: 50px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+
+	#headerArea .nav li {
+		float:left;
+	}
+
+	#headerArea .nav li a{
+		display:block;
+		width:50px;
+		text-align:center;
+		text-decoration:none;
+		color:#FFF;	
+	}
+
+	/*頁首_banner*/
+
+	#banner{
+		width:100%;
+		height:0;
+		margin:0 auto;
+		padding-bottom: 40%;
+		background-size: cover;
+		background-image:url(../assets/header_desktop.png);
+		margin-bottom: 25px;
+	}
+
+	#banner h1{
+		display: inline-block;
+		font-size: 40px;
+		width: 100%;
+		color: #FFF;
+		line-height: 420px;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	/*內容*/
+	#container{
+		width:100%;
+		overflow: hidden;
+	}
+
+	.introduction{
+		display: block;
+		width:100%;
+		height: auto;
+	}
+
+	.introduction li{
+		width: 31.33333%;
+		height: auto;
+		margin-right: 1%;
+		margin-left: 1%;
+		float: left;
+		text-align:center;
+		margin-bottom: 25px;
+	}
+
+	.introduction img{
+		width: 200px;
+		height: 200px;
+		text-align:center;
+	}
+
+	.introduction h4{
+		text-align: center;
+		padding-bottom: 10px;
+	}
+
+	.introduction span{
+		width: 100%;
+		padding: 2%;
+	}
+
+	.introduction_two{
+		display: block;
+		width:100%;
+		height: auto;
+		padding:1% 0;
+		margin-bottom: 25px;
+		float:left;
+		background-color: #3d1101;
+		clear: both;
+	}
+
+	.introduction_two li{
+		width:48%;
+		padding-left:1%;
+		float:left;
+	}
+
+		
+	.introduction_two img{
+		width: 100%;
+	}
+		
+	.introduction_two li p{
+		color: #FFF;
+	}
+		
+	.introduction_three {
+		width: 100%;
+		height: 180px;
+		margin-bottom:25px;
+		clear: both;
+	}
+
+	.introduction_three li{
+		width: 31.33333%;
+		margin-right: 1%;
+		margin-left: 1%;
+		float: left;
+		position: relative;
+		margin-bottom: 20%;
+	}
+
+	.introduction_three li .blog-pho{
+		width: 25%;
+	}
+
+	.introduction_three li .blog-pho img{
+		width: 100%;
+	}	
+
+	.introduction_three li .blog-content{
+		width: 73%;
+		margin-left: 2%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}	
+		
+	.blog-content h4{
+		width: 100%;
+		height: auto;
+		margin-bottom:25px;
+	}
+
+	.blog-content span{
+		width: 100%;
+		height: auto;
+	}
+
+	.reservation{
+		width:100%;
+		height: 410px;
+		padding:1%;
+		background-color: #f6f4f3;
+		margin-bottom: 25px;
+		position: relative;
+	}
+
+	.reservation .contact{
+		width: 49%;
+		float:left;
+	}
+
+	.reservation .map{
+		width: 49%;
+		float:left;
+	}
+
+	.reservation .contact li{
+		padding-bottom: 20px;
+	}
+
+	.contact .input_text{
+		width: 100%;
+		height: 30px;
+		border: 1px solid #CCC;
+	}
+
+	/*頁尾*/
+	#footer{
+		width:100%;
+		height: 200px;
+		padding: 1%;
+		margin: 0 auto;
+	}
+
+	#footer .content-box{
+		width: 350px;
+		float: left;
+		margin-right: 2%;
+		margin-bottom: 5%;
+	}
+
+	.content-box h4{
+		width: 340px;
+		float: left;
+		margin-bottom: 10px;
+	}
+
+	.logo_two{
+		float: right;
+	}
+
+	.com{
+		float: right;
+		margin-left:10px;
+		margin-top:10px;
+	}
+
+	/*登入頁*/
+	#container{
+		width: 100%;
+		height: auto;
+	}
+	#container .login_top{
+		width: 400px;
+		height: 100px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	#container .login_box{
+		width: 400px;
+		height: 250px;
+		margin: 0 auto;
+		border-top: 4px solid #F75000;
+		box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+		margin-bottom:40px;
+		padding: 1%;
+	}
+
+
+
+	/*購物車列*/
+
+	#container .cart{
+		width: 100%;
+		height: auto;
+	}
+
+	.cart .list-area{
+		width: 30%;
+		height: auto;
+		float: left;
+	}
+
+	.list-area h4{
+		width: 100%;
+		height: auto;
+		padding-bottom: 25px;
+	}
+
+	.list-area ul{
+		width: 100%;
+		height: auto;
+	}
+
+	.list-area li{
+		display: block;
+		width: 100%;
+		height: 25px;
+		line-height: 25px;
+		border-bottom: 1px solid #3d1101; 
+		margin-bottom: 15px;
+		padding-bottom: 5px;
+		color: #3d1101;
+	}
+
+	.list-area li a:hover{
+		display: block;
+		background-color:#3d1101; 
+		color: #FFF;
+	}
+
+	.cart .prouduct{
+		width: 68%;
+		height: auto;
+		margin-left: 2%;
+		float: left;
+	}
+
+	.prouduct .search-area{
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px; 
+	position: relative;
+}
+
+	.formSearch{
+		width: 480px;
+		height: 30px;
+		height: auto;
+		position: relative;
+	}
+	.formSearch .searchbox{
+		width: 300px;
+		height:25px;
+		top: -2px;
+		border: 2px solid #3d1101;
+	}
+
+	.formSearch .submit_btn{
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		vertical-align: middle;
+		border: 2px solid #3d1101;
+		background-color: #3d1101;
+		position: absolute;
+		top: 0;
+		right: 150px;
+	}
+
+	.search-area span{
+		width: 100px;
+		height: 25px;
+		position: absolute;
+		top: 0;
+		right: -10px;
+	}
+
+	.prouduct .list_food-area{
+		width: 100%;
+		height: auto;
+	}
+
+	.list_food-area .list_food{
+		width: 100%;
+		height: auto;
+	}
+
+	.list_food li{
+		width: 31.333%;
+		margin: 1%;
+		height: 220px;
+		float: left;
+		text-align: center;
+	}
+
+	.list_food li img{
+		width: 100%;
+	}
+
+	.list_food li .en_text{
+		font-size: 8px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #3d1101;
+	}
+
+	.list_food li .price{
+		font-size: 26px;
+		font-weight: bold;
+		font-style: italic;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
